@@ -103,6 +103,7 @@ decimalButton.addEventListener("click", handleDecimalClicked);
 jsBackButton.addEventListener("click", handleBackButtonClicked);
 
 document.onkeydown = function (event) {
+  console.log(event);
   if ("+*-/".includes(event.key)) {
     handleOperatorClicked(event.key);
   } else if (event.key === "Enter") {
@@ -113,7 +114,7 @@ document.onkeydown = function (event) {
     handleBackButtonClicked();
   } else if (event.key === "Escape") {
     handleClearClicked();
-  } else if (event.code.includes("Digit") || event.code.includes("Numpad")) {
+  } else if ("0123456789".includes(event.key)) {
     handleNumberClicked(event.key);
   }
 };
