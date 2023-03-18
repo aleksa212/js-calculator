@@ -103,7 +103,6 @@ decimalButton.addEventListener("click", handleDecimalClicked);
 jsBackButton.addEventListener("click", handleBackButtonClicked);
 
 document.onkeydown = function (event) {
-  console.log(event);
   if ("+*-/".includes(event.key)) {
     handleOperatorClicked(event.key);
   } else if (event.key === "Enter") {
