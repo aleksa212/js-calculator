@@ -40,7 +40,6 @@ const operate = {
 };
 
 function handleOperatorClicked(value) {
-  console.log(value);
   if (operator && next) {
     operator = value;
     return;
@@ -52,7 +51,6 @@ function handleOperatorClicked(value) {
   } else {
     const calculation = operate[operator](firstValue, currentValue);
     firstValue = calculation;
-    console.log(calculation, calculation.toString().length);
     if (calculation.toString().length > 16) {
       calculatorDisplay.textContent = calculation.toExponential();
     } else {
